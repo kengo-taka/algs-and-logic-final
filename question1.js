@@ -3,7 +3,7 @@
 // ex. ('Jenny', 71) --> "Jenny is 71 years old!" 
 
 const nameAndAge = function(name, age) {
-    // your code here
+   return name+ " is " +age +" years old!"
 }
 
 

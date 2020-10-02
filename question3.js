@@ -9,7 +9,24 @@ what it does and why.
 */
 
 const kebabCase = function (str) {
-    // your code here
+    let arr = [];
+
+    if (str === "") {
+        return 'This is an empty string!';
+        // ↑ when str is empty string
+    } else {
+        str = str.toLowerCase();
+        // ↑ convert the calling value to lowercase 
+        arr = str.split(" ");
+        // ↑ convert string to array
+        for (i=0; i<arr.length; i++) {
+           arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+           // ↑ convert the first character to uppercase 
+        }
+        str = arr.join("-");
+        // ↑ join each part of array with "-"
+       return str;
+    }
 }
 
 console.log((kebabCase('Coding Is Fun') === 'Coding-Is-Fun') ? "Test 1: Passing" : "Test 1: Failing");
